@@ -8,10 +8,10 @@
 ## 基础知识
 **爬虫**：自动从互联网上获取数据
 
-简单的爬虫架构：
+简单的爬虫架构：  
 ![wormConstruction_simple](https://raw.githubusercontent.com/ZBayes/pic4markdown/master/wormConstruction_simple.png)
 
-简单爬虫运行流程
+简单爬虫运行流程  
 ![wormConstruction_steps](https://raw.githubusercontent.com/ZBayes/pic4markdown/master/wormConstruction_steps.png)
 
 ## URL管理器
@@ -28,7 +28,7 @@ URL管理器：管理待抓取的URL集合和已抓取URL集合。
 3. 缓存数据库：redis的set集合
 
 ## 网页下载器
-网页下载器：将互联网上URL对应网页下载到本地的工具。
+网页下载器：将互联网上URL对应网页下载到本地的工具。  
 ![wormConstruction_downloader](https://raw.githubusercontent.com/ZBayes/pic4markdown/master/wormConstruction_downloader.png)
 
 python的网页下载器
@@ -109,15 +109,16 @@ print response3.getcode()
 print cj
 print response3.read()
 ```
+
 ## 网页解析器
-网页解析器：从网页中提取有价值数据的工具。
+网页解析器：从网页中提取有价值数据的工具。  
 ![wormConstruction_analysiser](https://raw.githubusercontent.com/ZBayes/pic4markdown/master/wormConstruction_analysiser.png)
 
 ### Beautiful Soup
 - python第三方库，用于从HTML或者XML中提取数据，有自己的[官网](https://www.crummy.com/software/BeautifulSoup/)，同时还有[API文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html)。
 - 其下载方式可在API文档中找到。
 
-用法介绍如下图所示：
+用法介绍如下图所示：  
 ![wormConstruction_beautifulSoup](https://raw.githubusercontent.com/ZBayes/pic4markdown/master/wormConstruction_beautifulSoup.png)
 
 对一个标签：
