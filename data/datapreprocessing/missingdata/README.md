@@ -42,7 +42,7 @@ There always exists the problem of missing data, which may be a big challange fo
 本文以网上下载到的Brent原油价格为例（数据来源eia，共7700多条数据），实现数据的插值。
 语言：Python2.7
 
-从下图可以看出其中存在部分数据缺失：
+从下图可以看出其中存在部分数据缺失：  
 ![数据缺失展示](https://raw.githubusercontent.com/ZBayes/pic4markdown/master/20170709-1.png)
 
 首先，当然是导入需要的包。pandas是常见的用于对数据进行操作和分析的包；patplotlib是python中常见的用于进行数据可视化的包，而lagrange则是对应的拉格朗日函数。
