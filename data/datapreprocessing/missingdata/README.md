@@ -43,7 +43,7 @@ There always exists the problem of missing data, which may be a big challange fo
 语言：Python2.7
 
 从下图可以看出其中存在部分数据缺失：
-![数据缺失展示]()
+![数据缺失展示](https://raw.githubusercontent.com/ZBayes/pic4markdown/master/20170709-1.png)
 
 首先，当然是导入需要的包。pandas是常见的用于对数据进行操作和分析的包；patplotlib是python中常见的用于进行数据可视化的包，而lagrange则是对应的拉格朗日函数。
 ```python
@@ -89,7 +89,12 @@ data.to_csv('data_preprocessed.csv')
 ```
 
 绘制的图如下，可以看到油价的升降和实际合理，没有出现异常，就当做过了吧。
-![](20170709-2)
+![result_pic](https://raw.githubusercontent.com/ZBayes/pic4markdown/master/20170709-2.png)
+
+### 拉格朗日插值的优缺点
+优点：对非线性序列的插值估计较为准确，因为默构造的是次数较高的函数。
+缺点：构建插值函数后，对函数边缘位置的估计准确率下降很快，出现强烈的振荡现象（如下图所示），所以在对某个缺失值进行补充时，用该数据左右两边尽可能相同数量的数据构建拉格朗日插值函数，估计结果会更加准确；另外对具有明显线性性、平稳性的序列，也会有一定误差（此时，推荐用1阶的拉格朗日插值甚至是回归插值会比较好）。  
+![震荡](https://raw.githubusercontent.com/ZBayes/pic4markdown/master/20170709-3.jpg)
 
 ### 补充
 1. 关于拉格朗日插值法的详细解释，可以看参考文献[2]，很详细而且很清楚，图文并茂，存在性和唯一性和我的证明有些不同，大家看喜欢哪种吧。
